@@ -16,22 +16,20 @@ The start of the eCommerce project for building a fully functional MongoDB, expr
 ## The domain
 ----
 
-Most of the time in industry you are handed pretty vague requirements and expected to come up with a solution basedo on those requirements, luckily, we'll do the best to clarify what it is we are trying to build.  
-
-Most companies sell some sort of product and service. For this 3 day lab we will simulate buidling an eCommerce application. 
+Most companies sell some sort of product and service. For this project we will simulate buidling an eCommerce application. 
 
 We will start talking about some of the objects that will be needed to be stored into mongo.
 
 ### Customers
 ----
 
-First of most all eCommerce applications has a notion of a Customer.  Whenever you've purchased something from an online store you usually have to provide some information about you as a Customer.  Some of the information provided is your name, email address, addresses(billing and shipping), phone numbers (home, work, etc), password, and it's very common to have a way to turn a customer on or off (soft deleting, thing of something like active that is a boolean).
+First, most eCommerce applications have a notion of a Customer.  Whenever you've purchased something from an online store you usually have to provide some information about yourself as a Customer.  Some of the information provided is your name, email address, addresses (billing and shipping), phone numbers (home, work, etc), password, and it's very common to have a mechanism to turn a customer "on" or "off" (soft deleting, think of something like "active" that is a boolean).
 
 
 ### Products
 ----
 
-There needs to also be notion of storing Products or Services.  For this particular part, keep the Product model simple with a Name, Description, Price, and whether it's active or not (somtimes companies will want to turn things on and off).
+There needs to also be the notion of storing Products or Services.  For this particular part, keep the Product model simple with a Name, Description, Price, and whether it's active or not (somtimes companies will want to turn things on and off).
 
 
 ### Orders
