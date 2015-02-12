@@ -51,8 +51,8 @@ For this project feel free to use additional frameworks to help with development
 1. Add the fields as described above.
 
 #### Order
-1. Make sure you create a one-to-one relationship between Order and Customer. One of your fields should point to the Customer model, so you know which customer made the order.
-2. You should also have an `items` or some similar field, whcih represents a one-to-many relationship between products and the Order. You can put multiple `items` or products in a single order, so this field should be an array of Product objects. ([Hint](http://stackoverflow.com/questions/11912127/understanding-relationships-foreign-keys-in-mongoose))
+1. Make sure you create a one-to-one relationship between Order and Customer. One of your fields should point to the Customer model, so you know which customer made the order. Each Order should point to one Customer. Since you would always want to keep updated Customer information separate and updated outside of Orders, this would be a reference, not an embedded object (e.g. `myRefField: { type: Mongoose.Schema.Types.ObjectId, ref: 'OtherModel' }`)
+2. You should also have an `items` or some similar field, whcih represents a one-to-many relationship between products and the Order. However, this is a different relationship than with Customers. For example, if you have a product placed in an order, and then later on the price of that product changes or is modified, you wouldn't want that to change a present or a past order. The order captures the Product at the time it was created and shouldn't be updated whenever the product changes. Therefore, this will be an embedded Model. There will be many products in a single order, so this field should be an array of Product objects. (Hint: `myEmbeddedField: [MyOtherModel]`).
 
 ### Step 2: Enhance your models
 
@@ -64,3 +64,4 @@ For this project feel free to use additional frameworks to help with development
 Make your status field match possible statuses that could be associated with an order.
 
 3. Have your Order model use its own fields for shipping address and billing address, as customers addresses may change over time and we wouldn't want that to affect the status of a current or past order.
+4. Add some validation to your fields. Think about which fields would be required vs. optional, which fields need to be unique, min or max values or any other [validations](http://mongoosejs.com/docs/schematypes.html) that would be helpful to make your schemas more robust.
