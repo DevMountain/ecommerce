@@ -8,7 +8,7 @@ The start of the eCommerce project for building a fully functional MongoDB, expr
 
 ## Resources
 
-* [Mongoose] (https://github.com/jaredhanson/passport-github)
+* [Mongoose] (http://mongoosejs.com/)
 * [MongoDB Docs] (http://docs.mongodb.org/manual/)
 
 
