@@ -57,3 +57,10 @@ For this project feel free to use additional frameworks to help with development
 ### Step 2: Enhance your models
 
 1. Add createdAt, updatedAt fields to all your models, making it easy to track the creation and updated timestamps. Use the default of `Date.now` for both of these fields. ([Link](http://mongoosejs.com/docs/2.8.x/docs/defaults.html)).
+2. Add a `status` to your Order model. This can be an "enum" field, or a field that enumerates certain possible values. Like so:
+
+`primaryColor: { type: String, enum: ['blue', 'red', 'green'] }`
+
+Make your status field match possible statuses that could be associated with an order.
+
+3. Have your Order model use its own fields for shipping address and billing address, as customers addresses may change over time and we wouldn't want that to affect the status of a current or past order.
