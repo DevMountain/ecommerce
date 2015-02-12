@@ -24,7 +24,7 @@ First, most eCommerce applications have a notion of a Customer.  Whenever you've
 
 ### Products
 
-There needs to also be the notion of storing Products or Services.  For this particular part, keep the Product model simple with a Name, Description, Price, and whether it's active or not (somtimes companies will want to turn things on and off).
+There needs to also be the notion of storing Products or Services.  For this particular part, keep the Product model simple with a Name, Description, Price, and whether it's active or not (sometimes companies will want to turn things on and off).
 
 
 ### Orders
@@ -44,4 +44,16 @@ For this project feel free to use additional frameworks to help with development
 1. NPM install mongoose
 2. Create the models for Moongoose provided the above domain context of the application
 
-Feel free to add any additional information to the models that will ease or enhance your solution
+#### Customer
+1. Add the fields as described above.
+
+#### Product
+1. Add the fields as described above.
+
+#### Order
+1. Make sure you create a one-to-one relationship between Order and Customer. One of your fields should point to the Customer model, so you know which customer made the order.
+2. You should also have an `items` or some similar field, whcih represents a one-to-many relationship between products and the Order. You can put multiple `items` or products in a single order, so this field should be an array of Product objects. ([Hint](http://stackoverflow.com/questions/11912127/understanding-relationships-foreign-keys-in-mongoose))
+
+### Step 2: Enhance your models
+
+1. Add createdAt, updatedAt fields to all your models, making it easy to track the creation and updated timestamps. Use the default of `Date.now` for both of these fields. ([Link](http://mongoosejs.com/docs/2.8.x/docs/defaults.html)).
