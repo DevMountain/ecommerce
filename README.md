@@ -7,14 +7,12 @@ The start of the eCommerce project for building a fully functional MongoDB, expr
 
 
 ## Resources
-----
 
 * [Mongoose] (https://github.com/jaredhanson/passport-github)
 * [MongoDB Docs] (http://docs.mongodb.org/manual/)
 
 
-## The domain
-----
+## The Domain
 
 Most companies sell some sort of product and service. For this project we will simulate buidling an eCommerce application. 
 
