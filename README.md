@@ -39,9 +39,7 @@ The company will want to store various infomration about an order, for example t
 
 An order will need to store the product that is applied to the order and the quantity of how many products the customer has added to the order.  It might be handy to total up these lines (quantity * product price) to ease the subtotal calculation on the order.
 
-
-## Create a node project and create models for the above domain
-----
+## Step 1: Set up project and create models for the above description
 
 For this project feel free to use additional frameworks to help with development. 
 
