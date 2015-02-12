@@ -7,31 +7,27 @@ The start of the eCommerce project for building a fully functional MongoDB, expr
 
 
 ## Resources
-----
 
 * [Mongoose] (https://github.com/jaredhanson/passport-github)
 * [MongoDB Docs] (http://docs.mongodb.org/manual/)
 
 
-## The domain
-----
+## The Domain
 
-Most of the time in industry you are handed pretty vague requirements and expected to come up with a solution basedo on those requirements, luckily, we'll do the best to clarify what it is we are trying to build.  
-
-Most companies sell some sort of product and service. For this 3 day lab we will simulate buidling an eCommerce application. 
+Most companies sell some sort of product and service. For this project we will simulate buidling an eCommerce application. 
 
 We will start talking about some of the objects that will be needed to be stored into mongo.
 
 ### Customers
 ----
 
-First of most all eCommerce applications has a notion of a Customer.  Whenever you've purchased something from an online store you usually have to provide some information about you as a Customer.  Some of the information provided is your name, email address, addresses(billing and shipping), phone numbers (home, work, etc), password, and it's very common to have a way to turn a customer on or off (soft deleting, thing of something like active that is a boolean).
+First, most eCommerce applications have a notion of a Customer.  Whenever you've purchased something from an online store you usually have to provide some information about yourself as a Customer.  Some of the information provided is your name, email address, addresses (billing and shipping), phone numbers (home, work, etc), password, and it's very common to have a mechanism to turn a customer "on" or "off" (soft deleting, think of something like "active" that is a boolean).
 
 
 ### Products
 ----
 
-There needs to also be notion of storing Products or Services.  For this particular part, keep the Product model simple with a Name, Description, Price, and whether it's active or not (somtimes companies will want to turn things on and off).
+There needs to also be the notion of storing Products or Services.  For this particular part, keep the Product model simple with a Name, Description, Price, and whether it's active or not (somtimes companies will want to turn things on and off).
 
 
 ### Orders
@@ -43,9 +39,7 @@ The company will want to store various infomration about an order, for example t
 
 An order will need to store the product that is applied to the order and the quantity of how many products the customer has added to the order.  It might be handy to total up these lines (quantity * product price) to ease the subtotal calculation on the order.
 
-
-## Create a node project and create models for the above domain
-----
+## Step 1: Set up project and create models for the above description
 
 For this project feel free to use additional frameworks to help with development. 
 
