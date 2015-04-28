@@ -8,7 +8,7 @@ The start of the eCommerce project for building a fully functional MongoDB, expr
 
 ## Resources
 
-* [Mongoose] (http://mongoosejs.com/)
+* [MongoJS] (https://github.com/mafintosh/mongojs)
 * [MongoDB Docs] (http://docs.mongodb.org/manual/)
 
 
