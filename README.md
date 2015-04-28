@@ -1,7 +1,7 @@
 eCommerce Project - Day 1
 =================
 
-# Objectives
+## Objectives
 
 The purpose of this application is to build a simple backend using Node, Express, and MongoDB (via MongoJS) and connect it to a simple front-end Angular application.
 
