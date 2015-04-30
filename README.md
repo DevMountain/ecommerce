@@ -22,21 +22,21 @@ Today we are going to set up our Node application, set up a basic API, add funct
 
 ## Begin
 
-### Step 1: Set up Node app
+### Step 1: Set up Express app
 
 Set up your Node app. For this project, use MongoJS to work with MongoDB. Feel free to use any other modules or libraries that you feel will help.
 
 **Breakpoint**: You should be able to initialize your application and connect to MongoDB without errors.
 
-### Step 2: Create Node API
+### Step 2: Create Express API
 
 Create endpoints to create, read, update, and delete products.  Feel free to refer back to the mini-project from earlier today.  It will be a very similar process
 
-**Breakpoint**: You should be able to hit each of your endpoints without error, and see any parameters or queries that you're sending along the way.  Check with `console.log` in your endpoint handlers.
+**Breakpoint**: You should be able to hit each of your endpoints without error, and see any parameters or queries that you're sending along the way.  Check with `console.log` in your endpoint handlers. *Note*: We haven't hooked up to Mongo yet.  This is just to test our Express API.
 
 ### Step 3: Connect API to Mongo
 
-Connect your Node API to Mongo. After your request to Mongo is done, send a response back to the client.
+Connect your Express API to Mongo. After your request to Mongo is done, send a response back to the client.
 
 Once again, this is going to be very similar to what we did in the mini-project earlier today.  Feel free to refer back to that code for guidance.
 
