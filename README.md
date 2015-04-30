@@ -44,7 +44,7 @@ Once again, this is going to be very similar to what we did in the mini-project 
 
 ### Step 4: Create Front-end Interface
 
-Feel free to set up your front-end however you like.  The only stipulations is that you should have a main view where you can see all of the products, and an admin view(s) where you can create, edit, or delete products.  Don't worry about authentication or protecting your routes at this point.  If you have extra time, start to set up your front-end application as you think an eCommerce site should be organized.  Introduce some basic styling as well.
+Feel free to set up your front-end however you like.  The only stipulations is that you should have a main view where you can see all of the products, and an admin view(s) where you can create, edit, or delete products.  Don't worry about authentication or protecting your routes at this point.  If you have time, start to set up your front-end application as you think an eCommerce site should be organized.  Introduce some basic styling as well.
 
 **Breakpoint**: At this point, you should be able to go to the main view and see all of the products that are in your database.  You should also be able to go to the admin view, where you can create, update, or delete products.  As you use this interface, you should be able to get responses from the server, and see the data being changed in the database.  Use the terminal or RoboMongo to check and make sure your data is being manipulated correctly.
 
