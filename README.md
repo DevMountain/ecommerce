@@ -40,7 +40,7 @@ Connect your Express API to Mongo. After your request to Mongo is done, send a r
 
 Once again, this is going to be very similar to what we did in the mini-project earlier today.  Feel free to refer back to that code for guidance.
 
-**Breakpoint**: You should be able to hit an endpoint and have it touching your database (creating, reading, updating, or deleting a product in Mongo).  Use POSTMan to hit your endpoints.  You should be able to get a response back in POSTMan, and be able to see your data being manipulsated in your database.  You can check your database via the terminal or RoboMongo.
+**Breakpoint**: You should be able to hit an endpoint and have it touching your database (creating, reading, updating, or deleting a product in Mongo).  Use POSTMan to hit your endpoints.  You should be able to get a response back in POSTMan, and be able to see your data being manipulated in your database.  You can check your database via the terminal or RoboMongo.
 
 ### Step 4: Create Front-end Interface
 
