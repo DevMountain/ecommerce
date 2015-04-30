@@ -1,0 +1,25 @@
+{
+  "name": "ecommerce-day-one",
+  "version": "1.0.0",
+  "description": "eCommerce Project - Day 1 =================",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jacob-israel-turner/ecommerce-day-one"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jacob-israel-turner/ecommerce-day-one/issues"
+  },
+  "homepage": "https://github.com/jacob-israel-turner/ecommerce-day-one",
+  "dependencies": {
+    "body-parser": "^1.12.3",
+    "cors": "^2.6.0",
+    "express": "^4.12.3"
+  }
+}
