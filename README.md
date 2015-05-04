@@ -3,7 +3,7 @@ eCommerce Project - Part I
 
 ## Objectives
 
-The purpose of this application is to build a simple backend using Node, Express, and MongoDB (via MongoJS) and connect it to a simple front-end Angular application.
+The purpose of this application is to build a simple backend using Node, Express, and MongoDB and connect it to a simple front-end Angular application.
 
 During this project, you will solidify your understanding of the MongoDB API.  You will also be able to see how the database fits into the bigger picture of a full application.
 
