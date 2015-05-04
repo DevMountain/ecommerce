@@ -1,4 +1,4 @@
-eCommerce Project - Day 1
+eCommerce Project - Part I
 =================
 
 ## Objectives
