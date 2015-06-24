@@ -1,7 +1,7 @@
 var express = require('express');
 var cors = require('cors');
 var bodyParser = require('body-parser');
-ar mongo = require('mongojs');
+var mongo = require('mongojs');
 
 var app = express();
 var port = 9001;
