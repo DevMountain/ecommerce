@@ -1,3 +1,5 @@
+<img src="https://devmounta.in/img/logowhiteblue.png" width="250" align="right">
+
 eCommerce Project - Part I
 =================
 
@@ -53,3 +55,12 @@ Feel free to set up your front-end however you like.  The only stipulations is t
 ## End Day 1
 
 Congrats!  You've just created a skeleton eCommerce application.  Over the next couple of days we will be adding users and orders to our application to make it a full eCommmerce site.
+
+## Contributions
+If you see a problem or a typo, please fork, make the necessary changes, and create a pull request so we can review your changes and merge them into the master repo and branch.
+
+## Copyright
+
+© DevMountain LLC, 2015. Unauthorized use and/or duplication of this material without express and written permission from DevMountain, LLC is strictly prohibited. Excerpts and links may be used, provided that full and clear credit is given to DevMountain with appropriate and specific direction to the original content.
+
+<img src="https://devmounta.in/img/logowhiteblue.png" width="250">
