@@ -71,8 +71,6 @@ Now let's create the front-end. Feel free to set it up however you like.  The on
 
 **Breakpoint**: At this point, you should be able to go to the main view and see all of the products that are in your database.  You should also be able to go to the admin view, where you can create, update, or delete products.  As you use this interface, you should be able to get responses from the server, and see the data being changed in the database.
 
-==========
-
 ## End Day 1
 
 Congrats!  You've just created a skeleton eCommerce application.  Over the next couple of days we will be adding users and orders to our application to make it a full eCommmerce site.
