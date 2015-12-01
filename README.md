@@ -4,6 +4,7 @@ eCommerce Project - Part I
 ==========================
 
 [Part II](/part-two.md)
+
 [Part III](/part-three.md)
 
 ##Objective
