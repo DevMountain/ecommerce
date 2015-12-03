@@ -3,6 +3,10 @@
 eCommerce Project - Part II
 ===========================
 
+[Part I](/README.md)
+
+[Part III](/part-three.md)
+
 ##Objectives
 
 Build a simple backend using Node, Express, and MongoDB and connect it to a simple front-end Angular application.
