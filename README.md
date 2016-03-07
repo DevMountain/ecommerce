@@ -22,7 +22,7 @@ During this project, you will solidify your understanding of the MongoDB API.  Y
 
 ## The Domain
 
-Most companies sell some sort of product and service. For this project we will simulate buidling an eCommerce application.  We will build this project over the course of the next three days.
+Most companies sell some sort of product and service. For this project we will simulate building an eCommerce application.  We will build this project over the course of the next three days.
 
 Today we are going to set up our Node application, set up a basic API, add functionality to do CRUD actions with products, and create a simple front-end interface to be able to create, read, update, and delete products.
 
