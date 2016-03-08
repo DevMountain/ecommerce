@@ -39,7 +39,7 @@ Set up your Node app. For this project, use MongoJS to work with MongoDB. In thi
 
 This is new, but give it a try.  We already brought in mongojs.  Use it to create a new connection to the database
 
-**Breakpoint**: At the end of this step, you should be able to run your file with node and connect to MongoDB without any errors in your console.
+**TestPoint**: At the end of this step, you should be able to run your file with node and connect to MongoDB without any errors in your console.
 
 ####
 
@@ -73,9 +73,13 @@ Here are the API endpoints we will need:
 
 `DELETE /api/products/:id`
 
-**TESTPOINT**: You should be able to hit each of your endpoints without error and see any parameters or queries that you're sending along the way.  Check by using Postman by returning random strings in your endpoint handlers. *Note*: We haven't hooked up to Mongo yet. This is just to test our Express API.
+**TESTPOINT**: You should be able to hit each of your endpoints without error and see any parameters or queries that you're sending along the way.  Check by using Postman by returning random strings in your endpoint handlers.
+
+*Note*: We haven't hooked up to Mongo yet. This is just to test our Express API.
 
 ####
+
+**Making an endpoint reminder**
 
 A node endpoint is made by registering it with our express app :
 
@@ -354,15 +358,21 @@ app.delete('/api/products/:id', function(req, res){
 
 ### Create Front-end Interface
 
+####
+
 Now let's create the front-end. Feel free to set it up however you like.  The only stipulations are that you should have a main route/state where you can see all of the products and an admin route/state where you can create, edit, or delete products.  Don't worry about authentication or protecting your routes at this point.  If you have time, start to set up your front-end application as you think an eCommerce site should be organized.  Introduce some basic styling as well. You could use Bootstrap to help get things going visually.
 
-**Breakpoint**: At this point, you should be able to go to the main view and see all of the products that are in your database.  You should also be able to go to the admin view, where you can create, update, or delete products.  As you use this interface, you should be able to get responses from the server, and see the data being changed in the database.
+**TestPoint**: At this point, you should be able to go to the main view and see all of the products that are in your database.  You should also be able to go to the admin view, where you can create, update, or delete products.  As you use this interface, you should be able to get responses from the server, and see the data being changed in the database.
 
 ### End Day 1
+
+####
 
 Congrats!  You've just created a skeleton eCommerce application.  Over the next couple of days we will be adding users and orders to our application to make it a full eCommmerce site.
 
 ### Copyright
+
+####
 
 © DevMountain LLC, 2015. Unauthorized use and/or duplication of this material without express and written permission from DevMountain, LLC is strictly prohibited. Excerpts and links may be used, provided that full and clear credit is given to DevMountain with appropriate and specific direction to the original content.
 
@@ -371,6 +381,8 @@ Congrats!  You've just created a skeleton eCommerce application.  Over the next 
 ## Part II
 
 ### Objectives
+
+####
 
 Build a simple backend using Node, Express, and MongoDB and connect it to a simple front-end Angular application.
 
@@ -444,9 +456,11 @@ To create a schema we invoke `mongoose.Schema()` function and pass in an object 
 To define a type we set the value equal to an object.
 
 This creates a schema with one property, name, that is a required and unique string.
-`mongoose.Schema({
+```
+mongoose.Schema({
     name: { type: String, required: true, unique: true}
-})`
+})
+```
 
 **Creating a model**
 Once we've built our schema object we want to save it to a variable so that we can make a model with it.
@@ -479,7 +493,7 @@ module.exports = mongoose.model('product', schema)
 
 Now go to each of your product endpoints and put the necessary Mongoose logic to [Create](http://mongoosejs.com/docs/api.html#model_Model.create), [Read](http://mongoosejs.com/docs/api.html#model_Model.find), [findById](http://mongoosejs.com/docs/api.html#model_Model.findById),  [Update](http://mongoosejs.com/docs/api.html#model_Model.findByIdAndUpdate) and [Delete](http://mongoosejs.com/docs/api.html#model_Model.findByIdAndRemove) products. Refer to those links for documentation.
 
-**Breakpoint**: At this point you should be able to manipulate the product data via your Express endpoints just like you could when MongoJS was installed.  Test this using POSTMan and the command line or RoboMongo.  After you test the endpoints, go to your front-end product interface (if you were able to build it yesterday) and make sure that the interface still works and manipulates the data like you expect. You may have to update your data models on the front-end to match the model we just set up with Mongoose.
+**TestPoint**: At this point you should be able to manipulate the product data via your Express endpoints just like you could when MongoJS was installed.  Test this using POSTMan and the command line or RoboMongo.  After you test the endpoints, go to your front-end product interface (if you were able to build it yesterday) and make sure that the interface still works and manipulates the data like you expect. You may have to update your data models on the front-end to match the model we just set up with Mongoose.
 
 The next step will integrate your backend to the front-end application that you built yesterday.  You will also expand the application to include new functionality.
 
@@ -499,7 +513,7 @@ That's about it.  Callbacks, object structure, queries, all work pretty much the
 
 ####
 
-**Updated queries file**
+**Updated queries**
 
 ##### Find many query
 ```
@@ -566,6 +580,6 @@ Endpoints are how a front end and back end communicate.  Urls, parameters, queri
 
 Make sure that you have an interface where users can view products and add them to their cart.  
 
-**Breakpoint**: You should now be able to see all of the products on the front-end.
+**TestPoint**: You should now be able to see all of the products on the front-end.
 
 Once you've finished the front-end, take some time to style your app and make it user-friendly.  Tomorrow you will finish the app by adding a a cart to the user, allow them to check out, and keep track of their current and past orders.
