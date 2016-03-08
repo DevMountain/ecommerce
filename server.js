@@ -15,14 +15,21 @@ app.listen(port, function(){
 });
 
 app.get('/api/products', function(req, res){
-	var query = {};
-	if(req.query.id) {
-		query._id = mongo.ObjectId(req.query.id);
-	}
-	if(req.query.title){
-		query.title = req.query.title;
-	}
+	var query = req.query;
 	db.products.find(query, function(err, response){
+		if(err) {
+			res.status(500).json(err);
+		} else {
+			res.json(response);
+		}
+	});
+});
+
+app.get('/api/products/:id', function(req, res){
+	var idObj = {
+		_id: req.params.id
+	};
+	db.products.findOne(idObj, function(err, response){
 		if(err) {
 			res.status(500).json(err);
 		} else {
@@ -38,15 +45,15 @@ app.post('/api/products', function(req, res){
 		} else {
 			return res.json(response);
 		}
-	})
+	});
 });
 
-app.put('/api/products', function(req, res){
-	if(!req.query.id){
+app.put('/api/products/:id', function(req, res){
+	if(!req.params.id){
 		return res.status(400).send('id query needed');
 	}
 	var query = {
-		_id: mongo.ObjectId(req.query.id)
+		_id: mongo.ObjectId(req.params.id)
 	};
 	db.products.update(query, req.body, function(error, response){
 		if(error) {
@@ -54,15 +61,15 @@ app.put('/api/products', function(req, res){
 		} else {
 			return res.json(response);
 		}
-	})
+	});
 });
 
-app.delete('/api/products', function(req, res){
-	if(!req.query.id){
+app.delete('/api/products/:id', function(req, res){
+	if(!req.params.id){
 		return res.status(400).send('id query needed');
-	};
+	}
 	var query = {
-		_id: mongo.ObjectId(req.query.id)
+		_id: mongo.ObjectId(req.params.id)
 	};
 	db.products.remove(query, function(error, response){
 		if(error) {
@@ -70,5 +77,5 @@ app.delete('/api/products', function(req, res){
 		} else {
 			return res.json(response);
 		}
-	})
+	});
 });
