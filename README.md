@@ -572,9 +572,14 @@ Product.findByIdAndRemove(req.params.id, function(error, response){
 
 
 ### Cleaning up our code
+
+####
+
 It is important to keep your code looking clean and neat.  It would be wise for you to outsource the logic from each of your endpoints to a product controller or something similar.  You should also outsource your schema and model declarations to a Product model file.  If you need reminders on how Node's require and export system works, check out [this](http://openmymind.net/2012/2/3/Node-Require-and-Exports/) blog post.
 
 ### Connect Front-End
+
+####
 
 Endpoints are how a front end and back end communicate.  Urls, parameters, queries, and bodies.  That's it.  We didn't change any of those today.  We only changed what was going on underneath.  So our front end should still work!
 
