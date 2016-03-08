@@ -1,59 +1,109 @@
 <img src="https://devmounta.in/img/logowhiteblue.png" width="250" align="right">
 
-eCommerce Project - Part I
-==========================
+## eCommerce Project - Part I
 
-[Part II](/part-two.md)
+### Objective
 
-[Part III](/part-three.md)
-
-##Objective
+####
 
 Build a simple backend using Node, Express, and MongoDB and connect it to a simple front-end Angular application
 
 During this project, you will solidify your understanding of the MongoDB API.  You will also be able to see how the database fits into the bigger picture of a full application.
 
 
-## Resources
+#####  Resources
 
 * [MongoJS] (https://github.com/mafintosh/mongojs)
 * [MongoDB Docs] (http://docs.mongodb.org/manual/)
 
 
-## The Domain
+##### The Domain
 
-Most companies sell some sort of product and service. For this project we will simulate buidling an eCommerce application.  We will build this project over the course of the next three days.
+Most companies sell some sort of product and service. For this project we will simulate building an eCommerce application.  We will build this project over the course of the next three days.
 
 Today we are going to set up our Node application, set up a basic API, add functionality to do CRUD actions with products, and create a simple front-end interface to be able to create, read, update, and delete products.
 
-## Begin
+### Set up Express app
 
-### Step 1: Set up Express app
+####
 
 Set up your Node app. For this project, use MongoJS to work with MongoDB. In this step, you'll need to:
-1. Install the necessary npm packages
+1. Install the necessary npm packages (express, bodyParser, cors, mongojs)
 2. Require the modules in your server.js file
-3. Initiate the connection to MongoDB
-4. Create your Express app (no endpoints yet)
+3. Create your Express app (no endpoints yet) and listen for connections
 
-**Breakpoint**: At the end of this step, you should be able to initialize your application and connect to MongoDB without errors.
 
-### Step 2: Create Express API
+### Initialize your connection to Mongo
 
-Now you'll create endpoints to create, read, update, and delete products (CRUD).  Feel free to refer back to the Mini Project from earlier today.  It will be a very similar process.
+####
+
+This is new, but give it a try.  We already brought in mongojs.  Use it to create a new connection to the database
+
+**Breakpoint**: At the end of this step, you should be able to run your file with node and connect to MongoDB without any errors in your console.
+
+####
+
+When we require mongojs it gives us a function.  This function takes in two parameters:
+* The name of the database we want to connect to
+* An array of any collections we want to work with
+
+Our database name is going to be `ecommerce` and we're only going to work with a `products` collection.
+
+####
+
+**code**
+```
+var db = mongo('ecommerce', ['products']);
+```
+
+### Create Express API
+
+####
+
+Now you'll create endpoints to create, read, update, and delete products (CRUD).  Have them each send back a unique random string on the `res`.
 
 Here are the API endpoints we will need:
 
-`POST /products`
+`POST /api/products`
 
-`GET /products`
-`GET /products/:id`
+`GET /api/products`
 
-`PUT /products/:id`
+`PUT /api/products`
 
-`DELETE /products/:id`
+`DELETE /api/products/`
 
 **Breakpoint**: You should be able to hit each of your endpoints without error and see any parameters or queries that you're sending along the way.  Check by using Postman with `console.log` in your endpoint handlers. *Note*: We haven't hooked up to Mongo yet. This is just to test our Express API.
+
+####
+
+A node endpoint is made by registering it with our express app :
+
+`app.[method]([url], [callbackFunction])`
+
+IE
+
+`app.get('/orders/:id', function(req, res){})`
+
+####
+
+**code**
+```
+app.get('/api/products', function(req, res){
+  return "I am a random string in GET api/products"
+});
+
+app.post('/api/products', function(req, res){
+  return "Jellyfish live in POST api/products"
+});
+
+app.put('/api/products', function(req, res){
+  return "Once I was a walrus but then I was PUT in api/products"
+});
+
+app.delete('/api/products', function(req, res){
+
+});
+```
 
 ### Step 3: Connect API to Mongo
 
