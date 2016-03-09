@@ -6,7 +6,7 @@
 
 ####
 
-Build a simple backend using Node, Express, and MongoDB and connect it to a simple front-end Angular application
+Build a backend using Node, Express, and MongoDB and connect it to a front-end Angular application
 
 During this project, you will solidify your understanding of the MongoDB API.  You will also be able to see how the database fits into the bigger picture of a full application.
 
@@ -21,7 +21,7 @@ During this project, you will solidify your understanding of the MongoDB API.  Y
 
 Most companies sell some sort of product and service. For this project we will simulate building an eCommerce application.  We will build this project over the course of the next three days.
 
-Today we are going to set up our Node application, set up a basic API, add functionality to do CRUD actions with products, and create a simple front-end interface to be able to create, read, update, and delete products.
+Today we are going to set up our Node application, set up a basic API, add functionality to do CRUD actions with products, and create a front-end interface to be able to create, read, update, and delete products.
 
 ### Set up Express app
 
@@ -384,7 +384,7 @@ Congrats!  You've just created a skeleton eCommerce application.  Over the next 
 
 ####
 
-Build a simple backend using Node, Express, and MongoDB and connect it to a simple front-end Angular application.
+Build a backend using Node, Express, and MongoDB and connect it to a front-end Angular application.
 
 During this project you will practice using an ORM (Mongoose) to work with your database.  You will also solidify your understanding of models, schemas, middleware, and indexing.
 
@@ -594,7 +594,7 @@ Once you've finished the front-end, take some time to style your app and make it
 
 ####
 
-Build a simple backend using Node, Express, and MongoDB and connect it to a simple front-end Angular application.
+Build a backend using Node, Express, and MongoDB and connect it to a front-end Angular application.
 
 During this project you will use Mongoose to create relationships between multiple sets of data.
 
@@ -796,37 +796,38 @@ Save the entire user back to the database.
 ####
 __code__
 ```
-User.findById(req.params.user_id, function(err, res){
-    if(err) {
-      res.status(500).send(err)
-    }
-    var myUser = res;
-    var qty = req.query.qty/1;
-    var foundItem = -1;
-    myUser.cart.forEach(function(cartItem, index){
-        if(cartItem._id === req.query.itmId){
-          foundItem = index
-        }
-    })
-    if(index >=0){
-      if(qty === 0){
-        myUser.cart.splice(index, 1);
-      } else {
-        myUser.cart[myIndex].qty = qty
-      }
-    }
-    saveUser(myUser, req, res)
-})
-
-function saveUser(userToSave, req, res){
-  userToSave.save(function(err, result){
-    if(err) {
-      res.status(500).send(err)
-    } else {
-      res.send(result)
-    }
-  })
-}
+User.findById(req.params.user_id, function(err, resp) {
+     if (err) {
+       res.status(500).send(err)
+     }
+     var myUser = resp;
+     var qty = req.query.qty / 1;
+     var foundItem = -1;
+     myUser.cart.forEach(function(cartItem, index) {
+       if (cartItem._id.toString() === req.query.itmId) {
+         foundItem = index
+       }
+     })
+     if (foundItem >= 0) {
+        console.log("Found Item = " + foundItem)
+       if (qty === 0) {
+         myUser.cart.splice(foundItem, 1);
+       } else {
+         myUser.cart[myIndex].qty = qty
+       }
+     }
+     saveUser(myUser, req, res);
+   })
+   function saveUser(userToSave, req, res) {
+     userToSave.save(function(err, result) {
+       if (err) {
+         res.status(500).send(err)
+       } else {
+         res.send(result)
+       }
+     })
+   };
+ }
 ```
 
 ### User GET
