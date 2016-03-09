@@ -588,7 +588,7 @@ Make sure that you have an interface where users can view products and add them 
 
 Once you've finished the front-end, take some time to style your app and make it user-friendly.  Tomorrow you will finish the app by adding a a cart to the user, allow them to check out, and keep track of their current and past orders.
 
-## Part I
+## Part III
 
 ### Objective
 
@@ -726,6 +726,8 @@ module.exports = mongoose.model('User', schema)
 
 ### Create Endpoints
 
+####
+
 Create the following Express endpoints:
  * **POST** `/api/order/:user_id`
  * **GET** `/api/order/`
@@ -734,6 +736,8 @@ Create the following Express endpoints:
  * **GET** `/api/user/:id`
 
 ### Cart POST
+
+####
 
 With the cart POST endpoint, you will expect a request parameter of `user_id` that will be the id of a user. The request body will have a JSON of the product that is being added to the cart, including a quantity.  
 We have the id of the user we want to update, and the item we want to add to the cart.
