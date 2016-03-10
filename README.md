@@ -729,6 +729,7 @@ module.exports = mongoose.model('User', schema)
 ####
 
 Create the following Express endpoints:
+ * **POST** `/api/user/`
  * **POST** `/api/order/:user_id`
  * **GET** `/api/order/`
  * **POST** `/api/cart/:user_id`
