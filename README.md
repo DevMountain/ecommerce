@@ -814,7 +814,7 @@ User.findById(req.params.user_id, function(err, resp) {
        if (qty === 0) {
          myUser.cart.splice(foundItem, 1);
        } else {
-         myUser.cart[myIndex].qty = qty
+         myUser.cart[foundItem].qty = qty
        }
      }
      saveUser(myUser, req, res);
@@ -828,7 +828,7 @@ User.findById(req.params.user_id, function(err, resp) {
        }
      })
    };
- }
+}
 ```
 
 ### User GET
