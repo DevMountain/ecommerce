@@ -254,7 +254,7 @@ If we have no err then return our result.  Just to make sure it's valid json use
 ```
 app.get('/api/products/:id', function(req, res){
 	var idObj = {
-		_id: req.params.id
+		_id: mongo.ObjectId(req.params.id)
 	};
 	db.products.findOne(idObj, function(err, response){
 		if(err) {
