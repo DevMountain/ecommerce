@@ -28,7 +28,7 @@ Today we are going to set up our Node application, set up a basic API, add funct
 ####
 
 Set up your Node app. For this project, use MongoJS to work with MongoDB. In this step, you'll need to:
-1. Install the necessary npm packages (express, bodyParser, cors, mongojs)
+1. Install the necessary npm packages (express, body-parser, cors, mongojs)
 2. Require the modules in your server.js file
 3. Create your Express app (no endpoints yet) and listen for connections
 
