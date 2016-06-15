@@ -1,6 +1,6 @@
 <img src="https://devmounta.in/img/logowhiteblue.png" width="250" align="right">
 
-## Part I
+## eCommerce
 
 ### Objective
 
@@ -13,15 +13,15 @@ During this project, you will solidify your understanding of the MongoDB API.  Y
 Most companies sell some sort of product and service. For this project we will simulate building an eCommerce application.  We will build this project over the course of the next three days.
 
 
-##### [Day One](/part-one.md)
+### [Day One](/part-one.md)
 
 On day one, we will set up our Node application, set up a basic API, add functionality to do CRUD actions with products, and create a front-end interface to be able to create, read, update, and delete products.
 
-##### [Day Two](/part-two.md)
+### [Day Two](/part-two.md)
 
 On day two, we'll continue building the eCommerce application. We will convert the current Mongo functionality to use Mongoose.  We will be creating a Product model and replacing the current product functionality with that model.
 
-#### [Day Three](/part-three.md)
+### [Day Three](/part-three.md)
 
 On day three, we are going to create two new schemas, one for Orders and one for Carts.  We are also going to create a relationship between Carts and Products using a reference, a relationship between Orders and Products using embedding, and a relationship between Orders and Users using reference.
 
