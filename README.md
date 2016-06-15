@@ -1,5 +1,3 @@
-<img src="https://devmounta.in/img/logowhiteblue.png" width="250" align="right">
-
 ## eCommerce
 
 ### Objective
@@ -11,6 +9,8 @@ Build a backend using Node, Express, and MongoDB and connect it to a front-end A
 During this project, you will solidify your understanding of the MongoDB API.  You will also be able to see how the database fits into the bigger picture of a full application. 
 
 Most companies sell some sort of product and service. For this project we will simulate building an eCommerce application.  We will build this project over the course of the next three days.
+
+##
 
 
 ### [Day One](/part-one.md)
@@ -25,6 +25,7 @@ On day two, we'll continue building the eCommerce application. We will convert t
 
 On day three, we are going to create two new schemas, one for Orders and one for Carts.  We are also going to create a relationship between Carts and Products using a reference, a relationship between Orders and Products using embedding, and a relationship between Orders and Users using reference.
 
+##
 
 ### Contributions
 
@@ -38,5 +39,3 @@ If you see a problem or a typo, please fork, make the necessary changes, and cre
 ####
 
 © DevMountain LLC, 2015. Unauthorized use and/or duplication of this material without express and written permission from DevMountain, LLC is strictly prohibited. Excerpts and links may be used, provided that full and clear credit is given to DevMountain with appropriate and specific direction to the original content.
-
-<img src="https://devmounta.in/img/logowhiteblue.png" width="250">
