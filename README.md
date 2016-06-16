@@ -17,7 +17,7 @@ During this project, you will solidify your understanding of the MongoDB API.  Y
 Most companies sell some sort of product and service. For this project we will simulate building an eCommerce application.  We will build this project over the course of the next three days.
 
 
-##
+****
 
 
 ### [Day One](/part-one.md)
