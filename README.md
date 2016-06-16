@@ -33,8 +33,7 @@ On day two, we'll continue building the eCommerce application. We will convert t
 On day three, we are going to create two new schemas, one for Orders and one for Carts.  We are also going to create a relationship between Carts and Products using a reference, a relationship between Orders and Products using embedding, and a relationship between Orders and Users using reference.
 
 
-##
-
+****
 
 
 ### Contributions
