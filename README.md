@@ -16,6 +16,7 @@ During this project, you will solidify your understanding of the MongoDB API.  Y
 
 Most companies sell some sort of product and service. For this project we will simulate building an eCommerce application.  We will build this project over the course of the next three days.
 
+
 ##
 
 
@@ -31,7 +32,10 @@ On day two, we'll continue building the eCommerce application. We will convert t
 
 On day three, we are going to create two new schemas, one for Orders and one for Carts.  We are also going to create a relationship between Carts and Products using a reference, a relationship between Orders and Products using embedding, and a relationship between Orders and Users using reference.
 
+
 ##
+
+
 
 ### Contributions
 
