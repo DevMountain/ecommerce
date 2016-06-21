@@ -29,12 +29,18 @@
 			</form>
 		</div>
 
+		<div>
+			Filter: <input type="text" ng-model="searchTerm">
+		</div>
+
 		<div class="products">
 			<ul>
-				<li class="product-box" ng-repeat="product in products">  
-					<p><span class="alter">Title:</span> {{product.title}}</p>
-					<p><span class="alter">Price:</span> {{product.price}}</p>
+				<li class="product-box" ng-repeat="product in products | filter : searchTerm track by product._id">  
+					<p><span class="alter">Title:</span> {{product.title | uppercase}}</p>
+					<p><span class="alter">Price:</span> {{product.price | currency}}</p>
 					<p><span class="alter">Description:</span> {{product.description}}</p>
+					<button ng-click="editProduct(product._id)">Edit</button>
+					<button ng-click="deleteProduct(product._id)">Delete</button>
 				</li>
 			</ul>
 		</div>

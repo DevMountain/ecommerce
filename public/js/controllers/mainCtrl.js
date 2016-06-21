@@ -13,6 +13,10 @@ angular.module('eCommerce')
 			mainService.addProduct(product);
 		}
 
+		$scope.deleteProduct = function (mongoId) {
+			mainService.deleteProduct(mongoId);
+		}
+
 		$scope.getProducts();
 
 

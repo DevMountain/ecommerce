@@ -1,77 +1,66 @@
-const mongodb = require('mongojs');
-let db = mongodb('ecommerce', ['products']);
-
+// const mongodb = require('mongojs');
+// let db = mongodb('ecommerce', ['products']);
+const Product = require('./Product.js')
 
 module.exports = {
 	getProducts(req, res, next){
-		db.products.find({}, (error, response) =>{
+		Product.find({}, (error, products)=>{
 			if (error) {
-				return res.status(500).json("error");
-			}else{
-				return res.status(200).json(response);
+				return res.status(500).json(error);
 			}
+			return res.status(200).json(products);
 		});
 	},
 
 	getProductByQuery(req, res, next){
-		db.products.find(req.query, (error, response)=>{
+		Product.find(req.query, (error, products)=>{
 			if (error) {
-				return res.status(500).json("error");
-			}else{
-				return res.status(200).json(response);
+				return res.status(500).json(error);
 			}
-		});
+			return res.status(201).json(products);
+		})
 	},
 
 	getProduct(req, res, next) {
-
-		db.products.findOne({_id : mongodb.ObjectId(req.params.id)}, (error, response) =>{
+		Product.findById(req.params.id, (error, product)=>{
 			if (error) {
-				return res.status(500).json("error");
-			}else{
-				return res.status(200).json(response);
+				return res.status(500).json(error);
 			}
+			return res.status(200).json(product);
 		})
 	},
 
 	createProduct(req, res, next){
-		db.products.save(req.body, (error, response) =>{
+		new Product(req.body).save((error, productCreated)=>{
 			if (error) {
-				return res.status(500).json("error");
-			}else{
-				return res.status(200).send(response);
+				return res.status(500).json(error);
 			}
-		});
+			return res.status(201).json(productCreated);
+		})
 	},
 
 	deleteProduct(req, res, next){
 		if (!req.params.id) {
 			return res.status(500).json("Need a param Id");
-		};
-		db.products.remove({_id : mongodb.ObjectId(req.params.id)}, (error, response)=>{
+		}
+		Product.findByIdAndRemove(req.params.id, (error, deletedProduct)=>{
 			if (error) {
-				return res.status(500).json("error");
-			}else{
-				return res.status(200).json(response);
+				return res.status(500).json(error);
 			}
+			return res.status(200).json(deletedProduct);
 		})
 	},
 
 	updateProduct(req, res, next){	
 		if (!req.params.id) {
 			return res.status(500).json("Need a param Id");
-		};
-		db.products.update(
-			{
-				_id: mongodb.ObjectId(req.params.id)
-			}, 
-			req.body, (error, response)=>{
-				if (error) {
-					return res.status(500).json("error");
-				}else{
-					return res.status(200).json(response);
-				}
-			});
+		}
+		Product.findByIdAndUpdate(req.params.id, req.body, (error, updatedProduct)=>{
+			if (error) {
+				return res.status(500).json(error);
+			}
+			return res.status(200).json(updatedProduct);
+		})
 	},
 }
 
