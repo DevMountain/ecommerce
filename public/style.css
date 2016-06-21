@@ -1,0 +1,50 @@
+body{
+	background-color: lightgray;
+	margin: 0px;
+	padding: 0px;
+}
+.home{
+	width: auto;
+	height: auto;
+	border: 10px solid green;
+	padding: 10px;
+}
+.amazon-logo{
+	text-align: center;
+}
+.myAmazon{
+	text-align: right;
+}
+.myAmazon h3{
+	display: inline-block;
+	margin: 0px;
+	padding: 5px;
+	background-color: yellow;
+	border-radius: 5px;
+}
+.product-box{
+	margin: 10px;
+	border: 10px solid black;
+	padding: 10px;
+}
+.products p{
+	font-size: 20px;
+}
+.products ul{
+	list-style-type: none;
+}
+.alter{
+	color: blue;
+	font-weight: bold;
+}
+.text-box  {
+	display:inline-block;
+    vertical-align:top;
+}
+.text-area{
+	margin-left: 5px;
+}
+.spaced{
+	margin-top: 10px;
+	margin-bottom: 10px;
+}

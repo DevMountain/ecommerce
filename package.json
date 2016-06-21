@@ -1,0 +1,25 @@
+{
+  "name": "ecommerce",
+  "version": "1.0.0",
+  "description": "<img src=\"https://devmounta.in/img/logowhiteblue.png\" width=\"250\" align=\"right\">",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/npranto/ecommerce.git"
+  },
+  "author": "Nazmuz Shakib Pranto",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/npranto/ecommerce/issues"
+  },
+  "homepage": "https://github.com/npranto/ecommerce#readme",
+  "dependencies": {
+    "body-parser": "^1.15.2",
+    "cors": "^2.7.1",
+    "express": "^4.14.0",
+    "mongojs": "^2.4.0"
+  }
+}
