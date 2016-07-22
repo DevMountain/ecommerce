@@ -2,7 +2,7 @@
   "name": "ecommerce",
   "version": "1.0.0",
   "description": "<img src=\"https://devmounta.in/img/logowhiteblue.png\" width=\"250\" align=\"right\">",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js"
@@ -22,8 +22,7 @@
     "cors": "^2.7.1",
     "express": "^4.14.0",
     "mongodb": "^2.2.1",
-    "mongoose": "^4.5.4",
-    "node": "0.0.0"
+    "mongoose": "^4.5.4"
   },
   "devDependencies": {}
 }
