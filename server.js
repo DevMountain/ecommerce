@@ -18,9 +18,9 @@ var productsController = require('./controllers/productsController')
 //endpoints..........
 app.post('/products', productsController.create);
 app.get('/products', productsController.read);
-app.get('/products:id/', productsController.show);
-app.put('/products:id/', productsController.update);
-app.delete('/products:id/', productsController.destroy);
+// app.get('/products:id/', productsController.show);
+// app.put('/products:id/', productsController.update);
+// app.delete('/products:id/', productsController.destroy);
 
 
 

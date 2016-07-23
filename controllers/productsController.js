@@ -1,17 +1,19 @@
-var product = require('../models/products');
+var Product = require('../models/products');
 
 module.exports = {
   create: function(req, res, next) {
-    Product.create(req.body, function(error, response){
-       if(error) {
-         return res.status(500).json(error)
-       } else {
-         return res.json(response)
-       }
-     });
+    var product = new Product(req.body);
+      product.save(function(err, product) {
+        if(err) {
+          res.status(500).json(err);
+        } else {
+          res.status(200).json(product);
+        }
+      })
+
   },
   read: function(req, res, next) {
-    Product.find(req.query, function(err, response){
+    Product.find().exec(function(err, response){
         if(err) {
           res.status(500).json(err)
         } else {
