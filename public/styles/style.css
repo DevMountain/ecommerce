@@ -17,5 +17,9 @@ html {
 }*/
 
 #siteheader {
-  outline-color: 1px black;
+  height: 75px;
+  width: 100%;
+  outline-color: 2px black;
+  background-color: black;
+  opacity: .5;
 }
