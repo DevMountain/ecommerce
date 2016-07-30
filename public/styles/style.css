@@ -1,5 +1,5 @@
 html {
-  height: 100%;
+  height: 2000px;
   width: 100%;
   background-color: white;
 }
@@ -17,9 +17,208 @@ html {
 }*/
 
 #siteheader {
-  height: 75px;
+  height: 100px;
   width: 100%;
+  padding-top: 4px;
   outline-color: 2px black;
   background-color: black;
+  opacity: .5;
+  position: absolute;
+  vertical-align: bottom;
+}
+
+#homebutton {
+  height: 75px;
+  width: 175px;
+  margin-left: 20px;
+  border-style: solid;
+  border-width: medium;
+  border-color: white;
+  background-color: black;
+  font-family: sans-serif;
+  opacity: .5;
+  position: relative;
+}
+
+a:link {
+    text-decoration: none;
+}
+
+
+}
+#nav {
+  height: 350px;
+  width: 100px;
+  background-color: black;
+  margin-top: 100px;
+}
+
+#social {
+  margin-left: 200px;
+  background-color: black;
+  opacity: .5;
+}
+
+.headeritems {
+  height: 20px;
+  width: 100px;
+  border-color: blue;
+  float: right;
+  font-family: sans-serif;
+  margin-top: 10px;
+  text-align: center;
+  z-index: 1;
+}
+
+/* Style The Dropdown Button */
+.dropbtn {
+    background-color: blue;
+    color: white;
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    vertical-align: bottom;
+
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+    position: relative;
+    background-color: blue;
+    display: inline-block;
+    float: right;
+    vertical-align: bottom;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: black;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0);
+
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+    color: white;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    font-family: sans-serif;
+    overflow:hidden;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover p {
+  background-color: white;
+  color: black;
+}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+.dropdown:hover .dropbtn {
+    background-color: black;
+}
+
+
+
+.tag {
+  text-align: center;
+  opacity: .5;
+  font-family: sans-serif;
+  margin-top: 400px;
+  position: absolute;
+  justify-content: center;
+}
+.fullscreen-bg {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    overflow: hidden;
+    z-index: -100;
+}
+
+.fullscreen-bg__video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: auto;
+    height: auto;
+    min-width: 100%;
+    min-height: 500px;
+    -webkit-transform: translate(-50%, -50%);
+       -moz-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+	    transform: translate(-50%, -50%);
+}
+
+@media (max-width: 767px) {
+    .fullscreen-bg {
+        background: url('https://www.youtube.com/watch?v=C_E3bSFi8lI') center center / cover no-repeat;
+    }
+
+    .fullscreen-bg__video {
+        display: "hotrod_tracer.jpg";
+    }
+}
+
+
+
+.cosmetics {
+  cursor: pointer;
+}
+
+.base {
+  height: 1500px;
+  width: 100%;
+  background-color: black;
+  margin-top: 600px;
+  position: absolute;
+}
+
+.featured1 {
+  height: 100px;
+  width: 100%;
+  background-color: white;
+  display: inline-flex;
+  margin: 0;
+  justify-content: center;
+  padding: 0;
+  position: relative;
+}
+.links {
+  height: 300px;
+  width: 31%;
+  background-color: white;
+  display: inline-block;
+  margin: 0;
+  justify-content: center;
+  padding: 0;
+}
+
+.featured2 {
+  height: 400px;
+  width: 48%;
+  display: inline-block;
+  justify-content: center;
+  position: static;
+  font-family: sans-serif;
+}
+
+#text {
+  height: 20px;
+  width: 40px;
+  text-align: center;
+  vertical-align: middle;
+  position: absolute;
   opacity: .5;
 }
