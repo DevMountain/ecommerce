@@ -1,5 +1,5 @@
 html {
-  height: 2000px;
+  height: 1300px;
   width: 100%;
   background-color: white;
 }
@@ -167,7 +167,7 @@ a:link {
     }
 
     .fullscreen-bg__video {
-        display: "hotrod_tracer.jpg";
+        display: "./public/html/img/Ferrari.mp4";
     }
 }
 
@@ -178,7 +178,7 @@ a:link {
 }
 
 .base {
-  height: 1500px;
+  height: 1300px;
   width: 100%;
   background-color: black;
   margin-top: 600px;

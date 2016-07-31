@@ -34,6 +34,8 @@ app.get('/test', function(req, res) {
   res.send("Yo");
 });
 
+//......BACKEND>>>>>>>FRONTEND CONNECTION
+app.use(express.static('public'));
 
 //connection..........
 var port = 3030;

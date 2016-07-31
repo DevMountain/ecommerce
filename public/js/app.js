@@ -2,23 +2,48 @@ angular.module("ecommerce", ['ui.router']).config(function ($stateProvider, $url
         $stateProvider
             .state('home',{
                 url:'/',
-                templateUrl: "../index.html"
+                templateUrl: "./html/main.html"
             })
-            .state('Packages',{
-                url:'/turbos',
-                parent:'home',
-                templateUrl: "../html/packages.html"
-            })
-            .state('Performance',{
+            .state('turbos',
+            {
                 url:'/turbos',
                 parent:'home',
                 templateUrl: "../html/turbos.html"
             })
-            .state('cosmetics',{
-                url:'/cosmetics',
-                templateUrl: "../html/cosmetics.html",
-                controller: 'cosmeticsCtrl'
+            .state('exhaust',{
+                url:'/exhaust',
+                parent:'home',
+                templateUrl: "../html/exhaust.html"
+            })
+            .state('intercoolers',{
+                url:'/intercoolers',
+                templateUrl: "../html/intercoolers.html"
 
+            })
+            .state('clothing',{
+                url:'/clothing',
+                templateUrl: "../html/clothing.html"
+
+            })
+            .state('keychains',{
+                url:'/keychains',
+                parent:'home',
+                templateUrl: "../html/keychains.html"
+            })
+            .state('steering-wheels',{
+                url:'/steering-wheels',
+                parent:'home',
+                templateUrl: "../html/steeringwheels.html"
+            })
+            .state('seats',{
+                url:'/seats',
+                parent:'home',
+                templateUrl: "../html/seats.html"
+            })
+            .state('shiftknobs',{
+                url:'/shiftknobs',
+                parent:'home',
+                templateUrl: "../html/shiftknobs.html"
             })
             .state('contact',{
                 url:'/contact/:id',
@@ -26,12 +51,6 @@ angular.module("ecommerce", ['ui.router']).config(function ($stateProvider, $url
                 controller: 'contacCtrl'
 
             })
-            .state('intakes',{
-                url:'/locations',
-                templateUrl: "../html/intakes.html",
-                controller: 'intakesCtrl'
-
-            });
 
         $urlRouterProvider
             .otherwise('/');
