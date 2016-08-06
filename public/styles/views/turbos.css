@@ -1,0 +1,11 @@
+.background {
+  position: absolute;
+  z-index: -1;
+  height: 100%;
+  width: 100%;
+  border-style: solid;
+  border-color: black;
+  border-width: medium;
+  background-color: blue;
+
+}

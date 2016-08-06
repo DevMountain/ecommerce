@@ -1,30 +1,53 @@
 html {
-  height: 1300px;
+  height: 1400px;
   width: 100%;
   background-color: white;
 }
 
-
-/*#header {
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    background-color: rgba(20, 20, 20, 0.8);
-    border-top: 0px solid rgba(255, 255, 255, 1);
-    border-bottom: 0px solid rgba(255, 255, 255, 1);
+/*.frontpage {
+  position: absolute;
+  margin-top: 600px;
 }*/
+.sitecontainer {
+  height: 100%;
+  width: 100%;
+}
 
 #siteheader {
   height: 100px;
   width: 100%;
   padding-top: 4px;
-  outline-color: 2px black;
   background-color: black;
   opacity: .5;
   position: absolute;
-  vertical-align: bottom;
+}
+#headeritems {
+  height: 20px;
+  width: 100px;
+  border-color: blue;
+  float: right;
+  font-family: sans-serif;
+  margin-top: 80px;
+  text-align: center;
+}
+.cc:hover {
+  background-color: white;
+  color: black;
+}
+
+.ourcompany {
+  height: 100px;
+  width: 500px;
+  position: absolute;
+  text-align: left;
+  margin-top: 20px;
+  margin-left: 250px;
+  opacity: .5;
+  text-overflow: clip;
+}
+
+.ourcompany:hover {
+  opacity: 1;
 }
 
 #homebutton {
@@ -38,6 +61,10 @@ html {
   font-family: sans-serif;
   opacity: .5;
   position: relative;
+}
+
+#homebutton:hover {
+  opacity: 1;
 }
 
 a:link {
@@ -59,46 +86,38 @@ a:link {
   opacity: .5;
 }
 
-.headeritems {
-  height: 20px;
-  width: 100px;
-  border-color: blue;
-  float: right;
-  font-family: sans-serif;
-  margin-top: 10px;
-  text-align: center;
-  z-index: 1;
-}
+
 
 /* Style The Dropdown Button */
 .dropbtn {
-    background-color: blue;
+    background-color: black;
     color: white;
-    padding: 10px;
+    padding: 0px;
     font-size: 16px;
     border: none;
     cursor: pointer;
-    vertical-align: bottom;
-
+    display: block;
 }
 
 /* The container <div> - needed to position the dropdown content */
 .dropdown {
     position: relative;
-    background-color: blue;
-    display: inline-block;
+    background-color: black;
+    display: block;
     float: right;
-    vertical-align: bottom;
+    -webkit-animation-delay: 2s; /* Chrome, Safari, Opera */
+animation-delay: 2s;
 }
 
 /* Dropdown Content (Hidden by Default) */
 .dropdown-content {
     display: none;
-    position: absolute;
+    position: relative;
     background-color: black;
     min-width: 160px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0);
-
+    outline-style: 1px solid;
+    outline-color: white;
 }
 
 /* Links inside the dropdown */
@@ -108,7 +127,8 @@ a:link {
     text-decoration: none;
     display: block;
     font-family: sans-serif;
-    overflow:hidden;
+    overflow: hidden;
+    justify-content: center;
 }
 
 /* Change color of dropdown links on hover */
@@ -119,7 +139,9 @@ a:link {
 
 /* Show the dropdown menu on hover */
 .dropdown:hover .dropdown-content {
-    display: block;
+    display: inline-table;
+    transition: 1s;
+
 }
 
 /* Change the background color of the dropdown button when the dropdown content is shown */
@@ -134,11 +156,12 @@ a:link {
   opacity: .5;
   font-family: sans-serif;
   margin-top: 400px;
+  margin-left: 50%;
   position: absolute;
   justify-content: center;
 }
 .fullscreen-bg {
-    position: fixed;
+    position: absolute;
     top: 0;
     right: 0;
     bottom: 0;
@@ -151,8 +174,8 @@ a:link {
     position: absolute;
     top: 50%;
     left: 50%;
-    width: auto;
-    height: auto;
+    width: 100%;
+    height: 1000px;
     min-width: 100%;
     min-height: 500px;
     -webkit-transform: translate(-50%, -50%);
@@ -178,47 +201,56 @@ a:link {
 }
 
 .base {
-  height: 1300px;
+  height: 1000px;
   width: 100%;
   background-color: black;
-  margin-top: 600px;
+  margin-top: 900px;
   position: absolute;
+  display: inline-block;
+  justify-content: center;
 }
 
-.featured1 {
-  height: 100px;
-  width: 100%;
-  background-color: white;
-  display: inline-flex;
-  margin: 0;
-  justify-content: center;
-  padding: 0;
-  position: relative;
+.links:hover {
+  opacity: .5;
 }
+
 .links {
   height: 300px;
   width: 31%;
   background-color: white;
+  position: relative;
   display: inline-block;
-  margin: 0;
-  justify-content: center;
-  padding: 0;
+  margin-left: 25px;
+
 }
 
 .featured2 {
   height: 400px;
   width: 48%;
   display: inline-block;
-  justify-content: center;
-  position: static;
+  position: relative;
+  margin-top: 25px;
   font-family: sans-serif;
 }
 
-#text {
+.featured2:hover {
+  opacity: .5;
+}
+
+/*#text {
   height: 20px;
   width: 40px;
-  text-align: center;
-  vertical-align: middle;
-  position: absolute;
+  position: relative;
   opacity: .5;
+  background-color: white;
+}*/
+
+#contact {
+  height: 100px;
+  width: 200px;
+  position: absolute;
+  margin-left: 1200px;
+  margin-top: 1750px;
+  text-rendering: auto;
+  overflow: inherit;
 }
