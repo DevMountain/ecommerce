@@ -9,3 +9,34 @@
   background-color: blue;
 
 }
+
+.item {
+  height: 400px;
+  width: 250px;
+  position: relative;
+  background-color: grey;
+  margin-left: 50px;
+}
+
+.itemimg {
+  height: 200px;
+  width: 100%;
+  position: absolute;
+  background-color: white;
+  opacity: .5;
+}
+
+.turbos {
+  height: 900px;
+  width: 1600px;
+  position: absolute;
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 250px;
+  justify-content: center;
+}
+
+.info {
+  float: left;
+  margin-top: 300px;
+}

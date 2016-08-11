@@ -13,14 +13,21 @@ app.use(cors());
 
 //controllers......
 
-var productsController = require('./controllers/productsController')
+var TurbosController = require('./controllers/TurbosController')
+// var TurbosController = require('./controllers/SeatsController')
 
 //endpoints..........
-app.post('/turbos', productsController.create);
-app.get('/turbos', productsController.read);
-app.get('/turbos:id/', productsController.show);
-app.put('/turbos:id/', productsController.update);
-app.delete('/turbos:id/', productsController.destroy);
+app.post('/turbos', TurbosController.create);
+app.get('/turbos', TurbosController.read);
+app.get('/turbos:id/', TurbosController.show);
+app.put('/turbos:id/', TurbosController.update);
+app.delete('/turbos:id/', TurbosController.destroy);
+
+// app.post('/seats', SeatsController.create);
+// app.get('/seats', SeatsController.read);
+// app.get('/seats:id/', SeatsController.show);
+// app.put('/seats:id/', SeatsController.update);
+// app.delete('/seats:id/', SeatsController.destroy);
 
 
 
