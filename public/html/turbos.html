@@ -1,20 +1,14 @@
-<!DOCTYPE html>
-<html lang="en" ng-app="ecommerce">
 
-<head>
-    <title>Powell Performance</title>
-    <meta charset="utf-8">
-
-    <link rel="stylesheet" type="text/css" href="../styles/style.css">
-    <link rel="stylesheet" type="text/css" href="../styles/reset.css">
-    <link rel="stylesheet" type="text/css" href="../styles/views/turbos.css">
-
-</head>
-<body ng-controller="mainCtrl">
   <div class="Site Container">
     <div class="background">
       <img src="../html/img/Exhaust.jpg" style="width: 100%; height: 100%;">
     </div>
+
+<div ng-repeat="turbo in turbos">
+  {{turbo.title}}
+  {{turbo.description}}
+  {{turbo.price}}
+</div>
 
     <div style="top: 0px; bottom: 0px; right: 0px; width: 100px; position: fixed; background-color: black; opacity: .5; margin: auto; z-index: 50; height: 216px;" class="s5" id="comp-iiagwaej" data-reactid=".0.$SITE_ROOT.$desktop_siteRoot.$comp-iiagwaej">
       <div id="comp-iiagwaejbg" class="s5bg" data-reactid=".0.$SITE_ROOT.$desktop_siteRoot.$comp-iiagwaej.0">
@@ -57,12 +51,3 @@
 
 
   </div>
-
-
-<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.15/angular-ui-router.js"> </script>
-<script src="./js/app.js"></script>
-<script src="./js/mainCtrl.js"></script>
-<script src="./js/service.js"></script>
-</body>
-</html>

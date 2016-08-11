@@ -7,7 +7,8 @@ angular.module("ecommerce", ['ui.router']).config(function ($stateProvider, $url
             .state('turbos',
             {
                 url:'/turbos',
-                templateUrl: "./html/turbos.html"
+                templateUrl: "./html/turbos.html",
+                controller: "turbosctrl"
             })
             .state('exhaust',{
                 url:'/exhaust',
