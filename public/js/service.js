@@ -7,6 +7,15 @@ angular.module('ecommerce').service('service', function($http) {
     }).then(function(response){
       return response.data
     })
+  },
+  this.getExhaust = function() {
+    return $http({
+      method: 'GET',
+      url: "/Exhaust"
+    }).then(function(response){
+      return response.data
+    })
   }
+
 
 });

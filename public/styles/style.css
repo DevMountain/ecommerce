@@ -19,17 +19,27 @@ html {
   padding-top: 4px;
   background-color: black;
   opacity: .5;
-  position: absolute;
+  position: fixed;
 }
-#headeritems {
+
+.navbar {
+height: 21px;
+width: 800px;
+position: relative;
+float: right;
+}
+
+.headeritems {
   height: 20px;
   width: 100px;
   border-color: blue;
-  float: right;
   font-family: sans-serif;
-  margin-top: 80px;
   text-align: center;
+  position: relative;
+  display: inline-block;
+  margin: 10px
 }
+
 .cc:hover {
   background-color: white;
   color: black;
@@ -42,7 +52,7 @@ html {
   text-align: left;
   margin-top: 20px;
   margin-left: 250px;
-  opacity: .5;
+  opacity: .75;
   text-overflow: clip;
 }
 
@@ -130,24 +140,36 @@ animation-delay: 2s;
     overflow: hidden;
     justify-content: center;
 }
-
+@keyframes example {
+    from {background-color: black;}
+    to {background-color: white;}
+}
 /* Change color of dropdown links on hover */
 .dropdown-content a:hover p {
   background-color: white;
   color: black;
+  border-radius: 5% 5% 5% 5%;
+  animation-name: example;
+  animation-duration: 1.5s;
+
 }
 
 /* Show the dropdown menu on hover */
 .dropdown:hover .dropdown-content {
     display: inline-table;
     transition: 1s;
+    border-radius: 0 0 15% 15%;
+    border: white;
+    border: 1px white solid;
+
 
 }
 
 /* Change the background color of the dropdown button when the dropdown content is shown */
-.dropdown:hover .dropbtn {
+/*.dropdown:hover .dropbtn {
     background-color: black;
-}
+
+}*/
 
 
 
@@ -170,29 +192,21 @@ animation-delay: 2s;
     z-index: -100;
 }
 
-.fullscreen-bg__video {
+/*.fullscreen-bg__video {
     position: absolute;
     top: 50%;
     left: 50%;
     width: 100%;
     height: 1000px;
     min-width: 100%;
-    min-height: 500px;
+    min-height: 100px;
     -webkit-transform: translate(-50%, -50%);
        -moz-transform: translate(-50%, -50%);
         -ms-transform: translate(-50%, -50%);
 	    transform: translate(-50%, -50%);
-}
+}*/
 
-@media (max-width: 767px) {
-    .fullscreen-bg {
-        background: url('https://www.youtube.com/watch?v=C_E3bSFi8lI') center center / cover no-repeat;
-    }
 
-    .fullscreen-bg__video {
-        display: "./public/html/img/Ferrari.mp4";
-    }
-}
 
 
 
@@ -203,11 +217,20 @@ animation-delay: 2s;
 .base {
   height: 1000px;
   width: 100%;
-  background-color: black;
   margin-top: 45%;
   position: absolute;
   display: inline-block;
   justify-content: center;
+  z-index: -2;
+  background-image: linear-gradient(
+  #4E0000, black
+    );
+}
+
+. {
+  background-image: linear-gradient(
+    black;
+    );
 }
 
 .links:hover {
@@ -217,33 +240,57 @@ animation-delay: 2s;
 .links {
   height: 300px;
   width: 31%;
-  background-color: white;
-  position: relative;
   display: inline-block;
+  position: relative;
   margin-left: 25px;
+  border: 1px solid white;
 
 }
 
-.featured2 {
-  height: 400px;
-  width: 48%;
-  display: inline-block;
-  position: relative;
-  margin-top: 25px;
-  font-family: sans-serif;
-}
-
-.featured2:hover {
-  opacity: .5;
-}
-
-/*#text {
+.links .text {
   height: 20px;
   width: 40px;
+  position: absolute;
+  top: 45%;
+  left: 40%;
+}
+.featured2 {
+  height: 400px;
+  width: 25%;
+  display: inline-block;
   position: relative;
+  margin: 50px 25px;
+  font-family: sans-serif;
+  border: 1px solid white;
+}
+.featured2 .text {
+  height: 20px;
+  width: 40px;
+  position: absolute;
+  top: 42%;
+  left: 40%;
+}
+.featured2 :hover {
   opacity: .5;
-  background-color: white;
-}*/
+}
+.base p {
+  position: relative;
+  color: white;
+  display: inline-block;
+  bottom: 50px
+}
+
+
+
+.text :hover {
+  opacity: .5;
+}
+
+.pic {
+  position: absolute;
+  z-index: -1
+  left: 0;
+}
 
 #contact {
   height: 100px;

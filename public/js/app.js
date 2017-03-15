@@ -28,9 +28,9 @@ angular.module("ecommerce", ['ui.router']).config(function ($stateProvider, $url
                 url:'/keychains',
                 templateUrl: "./html/keychains.html"
             })
-            .state('steeringwheels',{
-                url:'/steeringwheels',
-                templateUrl: "./html/steeringwheels.html"
+            .state('suspension',{
+                url:'/suspension',
+                templateUrl: "./html/suspension.html"
             })
             .state('seats',{
                 url:'/seats',
