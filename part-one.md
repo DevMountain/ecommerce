@@ -1,4 +1,4 @@
-<img src="https://devmounta.in/img/logowhiteblue.png" width="250" align="right">
+<img src="https://s3.amazonaws.com/devmountain/readme-logo.png" width="250" align="right">
 
 eCommerce Project - Part I
 ============================
