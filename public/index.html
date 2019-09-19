@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html ng-app="eCommerce">
+<head>
+	<title>eCommerce</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body ng-controller="mainCtrl">
+	
+	<div class="home">
+
+		<div class="amazon-logo">
+			<img src="https://excoupuk.com/wp-content/uploads/2015/10/Amazon-Logo.png" alt="">
+		</div>
+
+		<div class="input-product">
+			<form>
+				<div class="spaced">
+					<label>Title: </label><input ng-model="product.title" type="text" placeholder="Coca Cola">
+				</div>
+				<div class="spaced">
+					<label>Price: </label><input ng-model="product.price" type="text" placeholder="$3.99">
+				</div>	
+				<div class="spaced">
+					<label class="text-box">Description: </label><textarea ng-model="product.description" class="text-area text-box" placeholder="Description..."></textarea>
+				</div>
+				<div class="spaced">
+					<button ng-click="addProduct(product)">Add</button>
+				</div>
+			</form>
+		</div>
+
+		<div>
+			Filter: <input type="text" ng-model="searchTerm">
+		</div>
+
+		<div class="products">
+			<ul>
+				<li class="product-box" ng-repeat="product in products | filter : searchTerm track by product._id">  
+					<p><span class="alter">Title:</span> {{product.title | uppercase}}</p>
+					<p><span class="alter">Price:</span> {{product.price | currency}}</p>
+					<p><span class="alter">Description:</span> {{product.description}}</p>
+					<button ng-click="editProduct(product._id)">Edit</button>
+					<button ng-click="deleteProduct(product._id)">Delete</button>
+				</li>
+			</ul>
+		</div>
+
+	</div>
+
+
+
+
+
+
+<!-- Angular -->
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.7/angular.js"></script>
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.3.1/angular-ui-router.js"></script>
+	<script src="./js/app.js"></script>
+	<script src="./js/controllers/mainCtrl.js"></script>
+	<script src="./js/mainService.js"></script>
+</body>
+</html>
